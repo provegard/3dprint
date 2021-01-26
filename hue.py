@@ -1,7 +1,5 @@
 from bluepy import btle
 
-#MAC = "C9:81:C5:E7:F6:4A"
-#MAC = "FD:EA:F5:FF:CB:D1"
 MAC = "DA:3C:2F:A3:65:B7"
 
 p = btle.Peripheral(MAC, btle.ADDR_TYPE_RANDOM)
@@ -36,7 +34,6 @@ try:
 
             print(f"data = {hx}")
 
-            #on = len(value) > 0 and value[0] == b"\x01"
             on = len(value) > 0 and value[0] == 1
             print(f"is on? {on}")
 
